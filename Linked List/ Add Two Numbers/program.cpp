@@ -16,30 +16,24 @@ public:
             curr2=curr2->next;
             
         }
-       
-        if(curr1){
-             while(curr1){
-            
-                ListNode *node = new ListNode((curr1->val+c)%10);
-                c = (curr1->val+c)/10;
-                tail->next=node;
-                tail=node;
-                curr1=curr1->next;
-            }
+        while(curr1){
         
+            ListNode *node = new ListNode((curr1->val+c)%10);
+            c = (curr1->val+c)/10;
+            tail->next=node;
+            tail=node;
+            curr1=curr1->next;
+        }
+        while(curr2){
+        
+            ListNode *node = new ListNode((curr2->val+c)%10);
+            c = (curr2->val+c)/10;
+            tail->next=node;
+            tail=node;
+            curr2=curr2->next;
         }
         
-        if(curr2){
-             while(curr2){
-            
-                ListNode *node = new ListNode((curr2->val+c)%10);
-                c = (curr2->val+c)/10;
-                tail->next=node;
-                tail=node;
-                curr2=curr2->next;
-            }
         
-        }
         if(c){
              ListNode *node = new ListNode(c);
              tail->next=node;
