@@ -13,3 +13,22 @@ Output3 -> 3 2 1 1 1 2 1 1 1 2 3 2 1 1 1 2 1 1 1 2 3
 2. Figure out the pattern and complete the recursive function pzz to achieve the above for any positive number n.
 
 */
+
+#include<iostream>
+using namespace std;
+
+
+void pzz(int n){
+    if(n==0)
+        return;
+    cout<<n<<" ";
+    pzz(n-1);
+    cout<<n<<" ";
+    pzz(n-1);
+    cout<<n<<" ";
+    
+}
+int main(){
+    int n; cin>>n;
+    pzz(n);
+}
