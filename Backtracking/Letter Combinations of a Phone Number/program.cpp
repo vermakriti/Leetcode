@@ -28,6 +28,7 @@ digits[i] is a digit in the range ['2', '9'].
 
 */
 
+//TC - 4^N * N  SC- O(N)
 class Solution {
 public:
     void solve(int i,string digits,string s,map<char,string> mp,vector<string>&ans){
