@@ -56,3 +56,42 @@ public:
         return ans;
     }
 };
+
+/* Iterative using one stack */
+
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        
+        vector<int> ans;
+        if(!root)return ans;
+        
+        TreeNode*curr=root,*temp;
+        stack<TreeNode*> s;
+        s1.push(root);
+        
+        while(curr || !s.empty()){
+            
+            if(curr){
+                st.push(curr);
+                curr=curr->left;
+            }
+            else{
+                temp=s.top()->right;
+                if(temp==nullptr){
+                    temp=s.top();
+                    s.pop();
+                    ans.push_back(temp->val);
+                    while(!s.empty() && temp==s.top()->right){
+                        temp=s.top();
+                        s.pop();
+                        ans.push_back(temp->val);
+                    }
+                }
+                else curr=temp;
+            }
+
+        }
+        return ans;
+    }
+};
