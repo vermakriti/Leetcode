@@ -1,3 +1,4 @@
+//level order traversal
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
@@ -43,5 +44,15 @@ public:
             return true;
         return false;
         
+    }
+};
+
+// DFS traversal
+class Solution {
+public:
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(!p || !q)
+            return (p==q);
+        return (p->val==q->val) && isSameTree(p->left,q->left) && isSameTree(p->right,q->right);
     }
 };
