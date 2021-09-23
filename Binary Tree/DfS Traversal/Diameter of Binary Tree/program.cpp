@@ -21,6 +21,7 @@ Output: 1
 
 */
 
+//TC-O(N) SC-O(N)
 class Solution {
 public:
     int solve(TreeNode*root,int &diameter){
