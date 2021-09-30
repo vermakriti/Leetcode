@@ -17,11 +17,10 @@ Explanation: (101) in base 2 = (5) in base 10
 class Solution {
 public:
     int getDecimalValue(ListNode* head) {
-        ListNode*curr=head;
         int num=0;
-        while(curr){
+        while(head){
             num=num*2+curr->val;
-            curr=curr->next;
+            head=head->next;
         }
         return num; 
     }

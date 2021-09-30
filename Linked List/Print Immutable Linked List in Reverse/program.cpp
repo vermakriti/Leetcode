@@ -38,18 +38,13 @@ Output: [-6,4,4,6,0,-2]
  * };
  */
 
-
-
-
 // TC-O(N) SC-O(N)
 class Solution {
 public:
     void printLinkedListInReverse(ImmutableListNode* head) {
         
-        if(head->getNext()==nullptr){
-            head->printValue();
+        if(head==nullptr){
             return;
-        }
         printLinkedListInReverse(head->getNext());
         head->printValue();
     }
