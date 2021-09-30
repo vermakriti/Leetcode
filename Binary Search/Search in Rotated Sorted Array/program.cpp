@@ -36,8 +36,26 @@ nums is guaranteed to be rotated at some pivot.
 
 */
 
+// brute force -TC-O(N)
+
 class Solution {
 public:
+    int search(vector<int>& nums, int target) {
+
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==target)
+                return i;
+        }
+        return -1;
+        
+    }
+};
+
+// TC-O(logN) SC-O(1)
+
+class Solution {
+public:
+    
     int binarySearch(vector<int>& nums, int target,int low,int high){
         int mid;
         while(low<=high){
@@ -50,6 +68,7 @@ public:
         }
         return -1;
     }
+
     int search(vector<int>& nums, int target) {
         int n=nums.size();
         if(n==1){

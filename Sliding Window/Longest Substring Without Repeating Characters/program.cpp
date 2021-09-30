@@ -34,7 +34,7 @@ s consists of English letters, digits, symbols and spaces.
 
 */
 
-// brute force -  TC -  O(N^2*N) - O(N^2)- for generating all substrings, O(N)-for checking characters repetation  SC - O(M)
+// brute force -  TC -  O(N*N*N) - O(N^2)- for generating all substrings, O(N)-for checking characters repetation  SC - O(M)
 
 class Solution {
 public:
