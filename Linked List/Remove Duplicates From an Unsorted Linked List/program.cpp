@@ -26,7 +26,6 @@ Explanation: 3 appears twice and 2 appears three times. After deleting all 3's a
 */
 
 //TC-O(N) SC-O(N)
-
 class Solution {
 public:
     ListNode* deleteDuplicatesUnsorted(ListNode* head) {

@@ -35,6 +35,7 @@ browserHistory.back(7);                   // You are in "google.com", you can mo
  
 */
 
+
 class BrowserHistory {
 public:
     class DListNode{
