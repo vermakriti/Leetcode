@@ -5,13 +5,9 @@ Remove list1's nodes from the ath node to the bth node, and put list2 in their p
 
 The blue edges and nodes in the following figure incidate the result:
 
-
 Build the result list and return its head.
 
- 
-
 Example 1:
-
 
 Input: list1 = [0,1,2,3,4,5], a = 3, b = 4, list2 = [1000000,1000001,1000002]
 Output: [0,1,2,1000000,1000001,1000002,5]
