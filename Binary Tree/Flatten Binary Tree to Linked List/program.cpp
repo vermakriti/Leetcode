@@ -30,7 +30,7 @@ Follow up: Can you flatten the tree in-place (with O(1) extra space)?
 
 */
 
-
+// TC-O(N) SC-O(N)
 class Solution {
 public:
  
@@ -57,8 +57,3 @@ public:
         }
     }
 };
-
-/*
-	TC-O(N)
-	SC-O(N)
-*/
