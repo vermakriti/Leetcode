@@ -32,7 +32,7 @@ obstacleGrid[i][j] is 0 or 1.
 
 */
 
-// brute force TC_O(2^N) SC-O(1)
+// brute force TC-O(2^N) SC-O(1)
 class Solution {
 public:
     int solve(int i,int j,vector<vector<int>>& grid){
@@ -52,7 +52,7 @@ public:
     }
 };
 
-//optimize TC_O(N*N) SC_O(N*N)
+//optimize TC-O(N*N) SC-O(N*N)
 class Solution {
 public:
     int dp[105][105];
