@@ -32,6 +32,8 @@ Output: []
 */
 
 
+// TC- O(NlogN) SC-O(N) where N is number of nodes in linkedlist.
+
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
