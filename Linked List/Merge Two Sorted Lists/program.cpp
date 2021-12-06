@@ -25,7 +25,7 @@ Output: [0]
 */
 
 
-// TC-O(max(M,N)) SC-O(1)
+// TC-O(min(M,N)) SC-O(1)
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
@@ -34,7 +34,6 @@ public:
         head=tail;
         
         while(l1 && l2){
-            
             if(l1->val<l2->val){
                 tail->next=l1;
                 l1=l1->next;
@@ -46,16 +45,8 @@ public:
             tail=tail->next;
         }
         
-        while(l1){
-            tail->next=l1;
-            l1=l1->next;
-            tail=tail->next;
-        }
-        while(l2){
-            tail->next=l2;
-            l2=l2->next;
-            tail=tail->next;
-        }
+        if(l1) tail->next=l1;
+        else tail->next=l2;
         head=head->next;
         return head;
     }

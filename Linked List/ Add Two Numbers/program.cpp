@@ -50,7 +50,6 @@ public:
         if(c){
             ListNode*node=new ListNode(c);
             tail->next=node;
-            tail=node;
         }
         head=head->next;
         return head;
