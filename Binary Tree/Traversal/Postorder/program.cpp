@@ -5,8 +5,8 @@ public:
         
         if(!root)return;
         postorder(root->left,ans);
-         postorder(root->right,ans);
-        v.push_back(root->val);
+        postorder(root->right,ans);
+        ans.push_back(root->val);
     }
     vector<int> postorderTraversal(TreeNode* root){
         

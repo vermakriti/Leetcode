@@ -45,44 +45,37 @@ public:
     }
     ListNode* reverseKGroup(ListNode* head, int k) {
         
-        ListNode*curr=head,*next,*prev=nullptr,*first,*head1;
+        ListNode*curr=head,*temp,*prev=nullptr,*next=nullptr;
         while(curr){
-            int length=1;
-            first=curr;
-            while(curr->next){
-                if(length==k) break;
-                curr=curr->next;
-                length++;
-            }
-            if(curr){
-                next=curr->next;
-                curr->next=nullptr;
-            }    
-            else next=nullptr;
-            
-           
-            if(prev==nullptr){
-                if(k==length){
-                    head1=reverse(first);
-                    head=head1;
-                    first->next=next;
-                }
-                else break;
-            }    
-            else{
-                if(k==length){
-                    head1=reverse(first);
-                    prev->next=head1;
-                    first->next=next;
-                }
-                else{
-                    prev->next=first;
+            int length=0;
+            temp=curr;
+            while(temp){
+                length++; 
+                if(length==k)
                     break;
-                }
+                temp=temp->next;
+            }
+            if(length==k){
+                if(temp){
+                    next=temp->next;
+                    temp->next=nullptr;
+                }    
+                else next=nullptr;
+                
+                ListNode*revHead=reverse(curr);
+                if(prev==nullptr)
+                    head=revHead;
+                else prev->next=revHead;
+                prev=curr;
+                curr=next;
+            }
+            else{
+                if(prev!=nullptr)
+                prev->next=curr;
+                break;
             }    
-            prev=first;
-            curr=next;
         }
+        
         return head;
     }
 };
