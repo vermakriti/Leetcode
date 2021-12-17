@@ -28,6 +28,8 @@ Output: [[3,1],[4,2]]
 
 */
 
+/* intuition - first transpose the matrix and after that reverse the each row */
+
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
