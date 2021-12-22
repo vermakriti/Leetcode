@@ -1,3 +1,4 @@
+// TC- O(V+E) SC-O(V)
 class Soltution{
   	public:
     bool dfs(int node,int parent,vector<int>adj[],vector<int>&visited){
